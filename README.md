@@ -1,3 +1,3 @@
 # testePraticoT2S
-Desenvolvimento de algoritmo para aplicação em Back-end utilizando Python
-Este código fonte em Python está completo conforme os vídeos desenvolvidos no Youtube.
+Desenvolvimento de algoritmo para aplicação em Back-end utilizando Python para integrar com MySQL e realizar operações de CRUD no banco de dados.
+Este código fonte é baseado nos vídeos não listados postados no Youtube.
