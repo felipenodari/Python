@@ -5,7 +5,7 @@ import os
 
 def header():
     print('=-=-=-=-=-=-=-=-=-=-=-= ')
-    print('        Crunch')
+    print('   Wordlist generator   ')
     print('=-=-=-=-=-=-=-=-=-=-=-= ')
 
 
