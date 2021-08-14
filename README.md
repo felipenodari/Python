@@ -1,2 +1,2 @@
 # Python programming
-Sort of codes using Python
+Sorted codes using Python3 Language
