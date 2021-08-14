@@ -396,4 +396,4 @@ try:
 except Error as erro:
     print(f'Infelizmente não foi possível se conectar ao banco: {erro} \nProcesso encerrado.')
 finally:
-    print('Obrigado por usar nosso sistema!')
+    print('Obrigado por usar nosso sistema!!')
