@@ -5,7 +5,7 @@ from mysql.connector import Error
 def conectar():
     try:
         global con
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         return 1
     except Error as erro:
         print(f'Erro de conexão ao banco: {erro}')
@@ -14,7 +14,7 @@ def conectar():
 
 def cria_tabela(id_cliente, nro_container, tipo, status, categoria, movimentacao, data_ini, hora_ini, data_fim, hora_fim):
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         cria_tabela_sql = """CREATE TABLE """ + id_cliente + """ (
                             id SMALLINT PRIMARY KEY AUTO_INCREMENT,
                             nro_container VARCHAR(70) NOT NULL,
@@ -43,7 +43,7 @@ def cria_tabela(id_cliente, nro_container, tipo, status, categoria, movimentacao
         print(f'Registro do cliente [{id_cliente}] inserido com sucesso!')
         cursor.close()
     except Error as erro:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         inserir_produtos = """INSERT INTO """ + id_cliente + """ (nro_container, tipo, status, categoria, movimentacao, data_ini, hora_ini, data_fim, hora_fim)
                                     VALUES ("""'\'' + nro_container + '\',\'' + tipo + '\',\'' + status + '\',\'' + categoria + '\',\'' + movimentacao + '\',\'' + data_ini + '\',\'' + hora_ini + '\',\'' + data_fim + '\',\'' + hora_fim + '\''""")"""
         cursor = con.cursor()
@@ -59,7 +59,7 @@ def cria_tabela(id_cliente, nro_container, tipo, status, categoria, movimentacao
 
 
 def insere_registro():
-    con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+    con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
     print('=-= Inserir dados do cliente =-=')
     id_cliente = str(input('Cliente: '))
     nro_container = str(input('Número do container (4 letras e 7 números): '))
@@ -99,7 +99,7 @@ def insere_registro():
 
 def ler_registro():
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         print('--------------')
         print('Os clientes cadastrados no banco de dados são:')
         imprime_clientes()
@@ -131,7 +131,7 @@ def ler_registro():
 
 def atualiza(declaracao):
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         altera = declaracao
         cursor = con.cursor()
         cursor.execute(altera)
@@ -147,7 +147,7 @@ def atualiza(declaracao):
 
 def altera_container():
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         print('--------------')
         print('Os clientes cadastrados no banco de dados são:')
         imprime_clientes()
@@ -194,7 +194,7 @@ def altera_container():
 
 def altera_movimentacao():
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         print('--------------')
         print('Os clientes cadastrados no banco de dados são:')
         imprime_clientes()
@@ -247,7 +247,7 @@ def altera_movimentacao():
 
 def imprime_clientes():
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         consulta_sql = 'SHOW TABLES;'
         cursor = con.cursor()
         cursor.execute(consulta_sql)
@@ -268,7 +268,7 @@ def exclui_cliente():
     imprime_clientes()
     cliente = str(input('Qual cliente deseja excluir: '))
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         consulta_sql = 'DROP TABLE ' + cliente
         cursor = con.cursor()
         cursor.execute(consulta_sql)
@@ -284,7 +284,7 @@ def exclui_cliente():
 def exclui_registro():
     try:
         ler_registro()
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         consulta_sql = 'SHOW TABLES;'
         cursor = con.cursor()
         cursor.execute(consulta_sql)
@@ -308,7 +308,7 @@ def exclui_registro():
 
 def relatorio_movimentacao():
     try:
-        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='#Brasil111')
+        con = mysql.connector.connect(host='localhost', database='db_conteiner', user='root', password='**********')
         consulta_sql = 'SHOW TABLES;'
         cursor = con.cursor()
         cursor.execute(consulta_sql)
