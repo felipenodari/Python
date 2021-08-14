@@ -155,6 +155,6 @@ while resp != 'p' and resp != 'c':
                     fim = time.time()
                     file.close()
                     print(f'\033[1;32m\n[+] Wordlist created in {fim-ini:.2f} sec.\033[0;0m\n')  
-                    input('... ENTER to exit ...')
+                    input('.... ENTER to exit ....')
                     print()
                     break
