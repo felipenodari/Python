@@ -1,4 +1,4 @@
-// Código para cadastrar containers em um banco de dados e realizar todas as operações de CRUD.
+// Código para cadastrar containers em um banco de dados e realizar todas as operações de CRUD em um banco de dados MySQL
 import mysql.connector
 from mysql.connector import Error
 
