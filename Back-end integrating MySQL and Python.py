@@ -1,3 +1,4 @@
+// Código para cadastrar containers em um banco de dados e realizar todas as operações de CRUD.
 import mysql.connector
 from mysql.connector import Error
 
@@ -372,7 +373,7 @@ try:
                     altera_movimentacao()
                 else:
                     continue
-            elif escolha == 4: #arrumar para excluir o cliente total ou alguma linha da tabela
+            elif escolha == 4:
                 print('Você deseja exluir:')
                 print('[1] - Cliente')
                 print('[2] - Excluir um registro específico de um cliente')
